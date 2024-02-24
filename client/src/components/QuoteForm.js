@@ -38,17 +38,17 @@ export default function QuoteStart() {
     <>
         { quoteStarted ? 
 
-            <form id="form" className={submitted ? "hidden" : "p-1 w-full border-2 bg-white/90 shadow-xl rounded-l"} onSubmit={handleSubmit}>
+            <form id="form" className={submitted ? "hidden" : "w-full flex flex-col p-1 border-2 bg-white/90 shadow-xl rounded-l"} onSubmit={handleSubmit}>
 
                 <input
-                    className="font-normal p-1 my-3 w-5/6"
+                    className="font-normal p-1 my-3 w-5/6 mx-auto"
                     type="text" 
                     value={car}
                     placeholder="VEHICLE MAKE & MODEL"
                     onChange={(e) => setCar(e.target.value)}
                 />
 
-                <ul>
+                <ul className="w-5/6 mx-auto">
                     {serviceOptions.map(serviceOption => (
                         <li key={serviceOption}>
                             <label>
@@ -78,26 +78,26 @@ export default function QuoteStart() {
                 </ul>
 
                 <textarea
-                        className="font-normal my-2 mx-auto border w-full h-[100px] p-2"
+                        className="font-normal my-2 mx-auto p-2 border w-5/6 h-[100px]"
                         type="text" 
                         value={notes}
                         placeholder="NOTES (OPTIONAL)"
                         onChange={(e) => setNotes(e.target.value)}
                     />
 
-                <input className="mx-auto my-2 p-1 bg-gray-800 text-white rounded w-full h-[50px] font-bold" type="submit" value="SUBMIT QUOTE REQUEST" />
+                <input className="my-2 mx-auto w-5/6 p-1 bg-gray-800 text-white rounded h-[50px] font-bold" type="submit" value="SUBMIT QUOTE REQUEST" />
                 
             </form>
     
         : 
         
-            <form className="p-1 w-full border-2 bg-white/90 shadow-xl rounded-l" onSubmit={handleStart}>
+            <form className="p-1 border-2 bg-white/90 shadow-xl rounded-l w-full flex flex-col" onSubmit={handleStart}>
 
                 <h2 className="font-bold text-[30px] text-center" value="FREE QUOTE">GET QUOTES</h2>
-                <p className="text-center text-sm pb-3">Have local detailers provide custom quotes just for you</p>
+                <p className="text-sm pb-3 text-center">Have local detailers provide custom quotes just for you</p>
 
                 <input
-                    className="font-normal m-2 p-1 rounded w-5/6"
+                    className="font-normal m-2 p-1 rounded w-5/6 mx-auto"
                     type="text" 
                     value={name}
                     placeholder="NAME"
@@ -105,7 +105,7 @@ export default function QuoteStart() {
                 />
 
                 <input
-                    className="font-normal m-2 p-1 rounded w-5/6"
+                    className="font-normal m-2 p-1 rounded w-5/6 mx-auto"
                     type="email" 
                     value={email}
                     placeholder="EMAIL"
@@ -113,7 +113,7 @@ export default function QuoteStart() {
                 />
 
                 <input
-                    className="font-normal m-2 p-1 rounded w-5/6"
+                    className="font-normal m-2 p-1 rounded w-5/6 mx-auto"
                     type="phone" 
                     value={phone}
                     placeholder="PHONE"
@@ -121,14 +121,14 @@ export default function QuoteStart() {
                 />
 
                 <input
-                    className="font-normal m-2 p-1 rounded w-5/6"
+                    className="font-normal m-2 p-1 rounded w-5/6 mx-auto"
                     type="zipcode" 
                     value={zip}
                     placeholder="ZIPCODE"
                     onChange={(e) => setZip(e.target.value)}
                 />
 
-                <input className="mx-auto my-2 p-1 bg-gray-800 text-white rounded w-full h-[50px] font-bold" type="submit" value="GET QUOTE" />
+                <input className="mx-auto my-2 p-1 bg-gray-800 text-white rounded w-5/6 h-[50px] font-bold" type="submit" value="GET QUOTE" />
 
             </form>
         }
