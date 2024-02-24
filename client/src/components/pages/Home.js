@@ -60,14 +60,13 @@ export default function Home() {
         </div>
 
         {/* Promotional section */}
-        <div className="w-full p-1 md:p-3 grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 mt-5">
+        <div className="p-1 md:p-3 md:flex mt-5">
 
-        {/*  On medium screens, left column image */}
-          <div style={{ backgroundImage: `url(${highlightImage})` }} className="bg-cover">
-          </div>
+          {/*  On medium screens, left column image */}
+          <img src={highlightImage} className="lg:w-1/2" />
 
           {/*  On medium screens, right column info section */}
-          <div className="p-5 mx-auto rounded">
+          <div className="p-5 mx-auto rounded lg:w-1/2">
             <p className="text-3xl font-bold">PAY LESS & GET MORE</p>
             <p className="py-3">Get quotes from top car detailers near you. Pro network detailers go through extensive qualification checks before being allowed to join our network. These qualifications include professional training, business licensing and insurance requirements, and most importantly, high customer feedback benchmarks.</p>
             <p>Don't waste time searching through the tons of unverified detailers in your area. Simply enter your information and let Pro network detailers reach out to you.</p>
