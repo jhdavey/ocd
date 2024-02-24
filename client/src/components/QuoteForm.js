@@ -37,7 +37,7 @@ export default function QuoteStart() {
   return (
     <>
         { quoteStarted ? 
-
+            {/* Second half form */}
             <form id="form" className={submitted ? "hidden" : "p-1 w-full border-2 bg-white/90 shadow-xl rounded-l"} onSubmit={handleSubmit}>
 
                 <input
@@ -90,7 +90,7 @@ export default function QuoteStart() {
             </form>
     
         : 
-        
+            {/* Start form */}
             <form className="p-1 w-full border-2 bg-white/90 shadow-xl rounded-l" onSubmit={handleStart}>
 
                 <h2 className="font-bold text-[30px] text-center" value="FREE QUOTE">GET QUOTES</h2>
@@ -105,7 +105,7 @@ export default function QuoteStart() {
                 />
 
                 <input
-                    className="font-normal m-2 p-1 rounded w-4/5 md:w-full"
+                    className="font-normal m-2 p-1 rounded w-5/6 md:w-full"
                     type="email" 
                     value={email}
                     placeholder="EMAIL"
@@ -113,7 +113,7 @@ export default function QuoteStart() {
                 />
 
                 <input
-                    className="font-normal m-2 p-1 rounded w-4/5 md:w-full"
+                    className="font-normal m-2 p-1 rounded w-5/6 md:w-full"
                     type="phone" 
                     value={phone}
                     placeholder="PHONE"
@@ -121,7 +121,7 @@ export default function QuoteStart() {
                 />
 
                 <input
-                    className="font-normal m-2 p-1 rounded w-4/5 md:w-full"
+                    className="font-normal m-2 p-1 rounded w-5/6 md:w-full"
                     type="zipcode" 
                     value={zip}
                     placeholder="ZIPCODE"
