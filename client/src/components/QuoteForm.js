@@ -37,7 +37,7 @@ export default function QuoteStart() {
   return (
     <>
         { quoteStarted ? 
-            {/* Second half form */}
+
             <form id="form" className={submitted ? "hidden" : "p-1 w-full border-2 bg-white/90 shadow-xl rounded-l"} onSubmit={handleSubmit}>
 
                 <input
@@ -90,7 +90,7 @@ export default function QuoteStart() {
             </form>
     
         : 
-            {/* Start form */}
+        
             <form className="p-1 w-full border-2 bg-white/90 shadow-xl rounded-l" onSubmit={handleStart}>
 
                 <h2 className="font-bold text-[30px] text-center" value="FREE QUOTE">GET QUOTES</h2>
