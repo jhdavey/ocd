@@ -41,7 +41,7 @@ export default function QuoteStart() {
             <form id="form" className={submitted ? "hidden" : "p-1 w-full border-2 bg-white/90 shadow-xl rounded-l"} onSubmit={handleSubmit}>
 
                 <input
-                    className="font-normal p-1 my-3"
+                    className="font-normal p-1 my-3 w-5/6"
                     type="text" 
                     value={car}
                     placeholder="VEHICLE MAKE & MODEL"
@@ -97,7 +97,7 @@ export default function QuoteStart() {
                 <p className="text-center text-sm pb-3">Have local detailers provide custom quotes just for you</p>
 
                 <input
-                    className="font-normal m-2 p-1 rounded w-5/6 md:w-full"
+                    className="font-normal m-2 p-1 rounded w-5/6"
                     type="text" 
                     value={name}
                     placeholder="NAME"
@@ -105,7 +105,7 @@ export default function QuoteStart() {
                 />
 
                 <input
-                    className="font-normal m-2 p-1 rounded w-5/6 md:w-full"
+                    className="font-normal m-2 p-1 rounded w-5/6"
                     type="email" 
                     value={email}
                     placeholder="EMAIL"
@@ -113,7 +113,7 @@ export default function QuoteStart() {
                 />
 
                 <input
-                    className="font-normal m-2 p-1 rounded w-5/6 md:w-full"
+                    className="font-normal m-2 p-1 rounded w-5/6"
                     type="phone" 
                     value={phone}
                     placeholder="PHONE"
@@ -121,7 +121,7 @@ export default function QuoteStart() {
                 />
 
                 <input
-                    className="font-normal m-2 p-1 rounded w-5/6 md:w-full"
+                    className="font-normal m-2 p-1 rounded w-5/6"
                     type="zipcode" 
                     value={zip}
                     placeholder="ZIPCODE"
