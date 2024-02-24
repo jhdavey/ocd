@@ -16,7 +16,7 @@ export default function Home() {
         <div style={{ backgroundImage: `url(${background})` }} className="bg-top bg-cover w-full md:flex">
 
             {/* Landing page intro section (left side)  */}
-            <div className="my-auto w-full md:w-1/2 p-3 flex flex-col bg-white/50">
+            <div className="my-auto w-full md:w-1/2 p-5 flex flex-col bg-white/50">
               <h2 className="font-bold text-[36px]">Find Top-Rated Pros Near You</h2>
 
               <div className="pl-1">
@@ -41,7 +41,7 @@ export default function Home() {
         </div>
 
         {/* Callouts */}
-        <div className="mx-auto w-7/8 p-4 md:flex md:justify-between">
+        <div className="mx-auto w-7/8 p-3 md:flex md:justify-between">
           <div className="md:w-1/4 m-3 p-5 mx-auto bg-red-600 text-center rounded">
             <HandThumbUpIcon className="py-3 h-[100px] mx-auto text-white" />
             <p className="text-2xl font-bold text-white">FREE AND EASY TO USE</p>
@@ -60,7 +60,7 @@ export default function Home() {
         </div>
 
         {/* Promotional section */}
-        <div className="p-1 md:p-3 md:flex mt-5">
+        <div className="p-1 md:p-5 md:flex mt-5">
 
           {/*  On medium screens, left column image */}
           <img src={highlightImage} className="lg:w-1/2" />
