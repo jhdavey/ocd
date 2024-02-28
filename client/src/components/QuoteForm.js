@@ -10,7 +10,7 @@ export default function QuoteStart() {
     const [car, setCar] = useState("");
     const [services, setServices] = useState([]);
     const [notes, setNotes] = useState('');
-    const serviceOptions = ['Exterior Detailing', 'Interior Detailing', 'Paint Correction', 'Ceramic Coating', 'PPF Installation', 'Headlight Restoration'];
+    const serviceOptions = ['Exterior Detailing', 'Interior Detailing', 'Paint Correction', 'Ceramic Coating', 'Headlight Restoration', 'PPF Installation', 'Tint Installation'];
     const [quoteStarted, setQuoteStarted] = useState(Boolean);
     const [submitted, setSubmitted] = useState(Boolean);
     
@@ -38,7 +38,7 @@ export default function QuoteStart() {
     <>
         { quoteStarted ? 
 
-            <form id="form" className={submitted ? "hidden" : "w-full flex flex-col p-1 border-2 bg-white/90 shadow-xl rounded-l"} onSubmit={handleSubmit}>
+            <form id="form" className={submitted ? "hidden" : "w-full md:w-3/4 flex flex-col p-1 border-2 bg-white/90 shadow-xl rounded-l"} onSubmit={handleSubmit}>
 
                 <input
                     className="font-normal p-1 my-3 w-5/6 mx-auto"
@@ -91,7 +91,7 @@ export default function QuoteStart() {
     
         : 
         
-            <form className="p-1 border-2 bg-white/90 shadow-xl rounded-l w-full flex flex-col" onSubmit={handleStart}>
+            <form className="p-1 border-2 bg-white/90 shadow-xl rounded-l w-full md:w-3/4 flex flex-col" onSubmit={handleStart}>
 
                 <h2 className="font-bold text-[30px] text-center" value="FREE QUOTE">GET QUOTES</h2>
                 <p className="text-sm pb-3 text-center">Have local detailers provide custom quotes just for you</p>
