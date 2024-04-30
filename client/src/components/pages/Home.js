@@ -16,7 +16,7 @@ export default function Home() {
         <div style={{ backgroundImage: `url(${background})` }} className="bg-top bg-cover w-full md:flex">
 
             {/* Landing page intro section (left side)  */}
-            <div className="my-auto w-full md:w-1/2 p-3 flex flex-col bg-white/50">
+            <div className="my-auto w-full md:w-1/2 p-3 flex flex-col bg-white/25">
               <h2 className="font-bold text-[36px]">Find Top-Rated Pros Near You</h2>
 
               <div className="p-3">
@@ -45,7 +45,7 @@ export default function Home() {
             </div>
  
             {/* Landing page intro section (right side)  */}
-            <div ref={form} className="w-full md:w-1/2 p-5 flex justify-center items-center bg-white/50">
+            <div ref={form} className="w-full md:w-1/2 p-5 flex justify-center items-center bg-white/25">
               <QuoteForm />
             </div>
 
