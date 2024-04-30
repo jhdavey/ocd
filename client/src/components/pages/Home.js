@@ -45,7 +45,7 @@ export default function Home() {
             </div>
  
             {/* Landing page intro section (right side)  */}
-            <div ref={form} className="w-full md:w-1/2 p-5 flex justify-center items-center bg-white/50">
+            <div ref={form} className="w-full md:w-1/2 p-5 flex justify-center items-center bg-white/75">
               <QuoteForm />
             </div>
 
