@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-SITEMAP: https://www.orlandocardetailing.com/sitemap.txt
+SITEMAP: https://www.orlandocardetailing.com/sitemap.xml
