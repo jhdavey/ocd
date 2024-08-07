@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function Faqs() {
   return (
@@ -33,4 +33,4 @@ export default function Faqs() {
     </div>
 
   )
-}
+};
