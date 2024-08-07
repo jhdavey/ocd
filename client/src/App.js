@@ -5,6 +5,7 @@ import Faqs from './components/pages/Faqs';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 
+
 function App() {
   return (
     <Router>
