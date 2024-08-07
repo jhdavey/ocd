@@ -9,24 +9,18 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
-app.use(express.static('../client/dist'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-// Production mode = use static paths @ /client/build
+// Serve static files from the React app in production mode
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
-};
+}
 
-// Set root for client
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, "../client"));
-});
-
+// API route for sending email
 app.post('/api/sendemail', async (req, res) => {
-  const { name, email, phone, zip, car , services, notes } = req.body;
-  // This route uses an app-specific password to log into personal email
+  const { name, email, phone, zip, car, services, notes } = req.body;
   try {
     const send_to = 'harley@quickeasewash.com';
     const sent_from = email;
@@ -41,13 +35,18 @@ app.post('/api/sendemail', async (req, res) => {
       <p>${car}</p>
       <p>Services requested: ${services}</p>
       <p>Notes: ${notes}</p>
-      `;
+    `;
 
     await sendEmail(subject, message, send_to, sent_from, reply_to);
-    res.status(200).json({success: true, message: "Email sent..."});
+    res.status(200).json({ success: true, message: "Email sent..." });
   } catch (error) {
     res.status(500).json(error.message);
   }
+});
+
+// Catch-all route to send back the index.html for client-side routing
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
 
 // Listen on PORT
