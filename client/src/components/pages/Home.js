@@ -1,5 +1,6 @@
 import { useRef } from "react";
-import QuoteForm from '../QuoteForm';
+// import QuoteForm from '../QuoteForm';
+import ContactForm from "../FormSpree";
 import background from "../../assets/images/ocdbackground2flip.png";
 import highlightImage from "../../assets/images/ocd4.jpg";
 import check from '../../assets/images/check.png';
@@ -46,7 +47,7 @@ export default function Home() {
  
             {/* Landing page intro section (right side)  */}
             <div ref={form} className="w-full md:w-1/2 p-5 flex justify-center items-center bg-white/25">
-              <QuoteForm />
+              <ContactForm />
             </div>
 
         </div>

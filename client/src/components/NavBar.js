@@ -9,7 +9,7 @@ export default function NavBar() {
       <a href="/" className="text-red-600 font-bold text-2xl md:text-[36px]">Orlando Car Detailing</a>
       <div>
         <button className="bg-white border border-black rounded-2xl px-4 m-1 font-bold" onClick={handleClick}>Join our Pro Network</button>
-        <a className="bg-white border border-black rounded-2xl px-4 m-1 font-bold" href='/faqs'>FAQs</a>
+        <a className="bg-white border border-black rounded-2xl px-4 m-1 font-bold" href='#/faqs'>FAQs</a>
       </div>
     </div>
   )
