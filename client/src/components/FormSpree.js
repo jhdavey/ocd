@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 
 function ContactForm() {
   const [name, setName] = useState("");
@@ -28,9 +29,11 @@ function ContactForm() {
   const [state, handleSubmit] = useForm("xldrleov");
 
   if (state.succeeded) {
-    return <p className="w-full md:w-3/4 font-bold text-lg p-5 bg-white/90 rounded-lg shadow-xl border border-3">
-      Thank you for your submission. Our Detailers will reach out to you ASAP!
-    </p>;
+    return (
+      <p className="w-full md:w-3/4 font-bold text-lg p-5 bg-white/90 rounded-lg shadow-xl border border-3">
+        Thank you for your submission. Our Detailers will reach out to you ASAP!
+      </p>
+    );
   }
 
   return (
@@ -41,26 +44,10 @@ function ContactForm() {
           className="w-full md:w-3/4 flex flex-col p-1 border-2 bg-white/90 shadow-xl rounded-lg"
           onSubmit={handleSubmit}
         >
-          <input
-            type="hidden"
-            name="name"
-            value={name}
-          />
-          <input
-            type="hidden"
-            name="email"
-            value={email}
-          />
-          <input
-            type="hidden"
-            name="phone"
-            value={phone}
-          />
-          <input
-            type="hidden"
-            name="zip"
-            value={zip}
-          />
+          <input type="hidden" name="name" value={name} />
+          <input type="hidden" name="email" value={email} />
+          <input type="hidden" name="phone" value={phone} />
+          <input type="hidden" name="zip" value={zip} />
 
           <input
             className="font-normal p-1 my-3 w-5/6 mx-auto"
@@ -82,9 +69,14 @@ function ContactForm() {
                     value={serviceOption}
                     onChange={(e) => {
                       if (e.target.checked) {
-                        setSelectedServices([...selectedServices, serviceOption]);
+                        setSelectedServices([
+                          ...selectedServices,
+                          serviceOption,
+                        ]);
                       } else {
-                        setSelectedServices(selectedServices.filter(s => s !== serviceOption));
+                        setSelectedServices(
+                          selectedServices.filter((s) => s !== serviceOption)
+                        );
                       }
                     }}
                   />
@@ -121,7 +113,7 @@ function ContactForm() {
           <h2 className="font-bold text-[30px] text-center" value="FREE QUOTE">
             GET QUOTES
           </h2>
-          <p className="text-sm pb-3 text-center">
+          <p className="text-lg pb-3 text-center">
             Have local detailers provide custom quotes just for you
           </p>
 
@@ -157,11 +149,12 @@ function ContactForm() {
             onChange={(e) => setZip(e.target.value)}
           />
 
-          <input
-            className="mx-auto my-2 p-1 bg-gray-800 text-white rounded w-5/6 h-[50px] font-bold"
+          <button
+            className="mx-auto my-2 p-1 bg-gray-800 text-white rounded w-5/6 h-[50px] font-bold flex items-center justify-center"
             type="submit"
-            value="GET QUOTE"
-          />
+          >
+            GET QUOTE <ArrowRightCircleIcon className="ml-2 h-5 w-5" />
+          </button>
         </form>
       )}
     </>
