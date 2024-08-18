@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.312c2b7a.css",
-    "main.js": "/static/js/main.956499ad.js",
+    "main.css": "/static/css/main.52a6826a.css",
+    "main.js": "/static/js/main.367aa7a8.js",
     "static/js/453.a7f4134a.chunk.js": "/static/js/453.a7f4134a.chunk.js",
     "static/media/rightbluebmw1.png": "/static/media/rightbluebmw1.94ed7d29526ecc40ac42.png",
-    "static/media/Exterior-Auto-Detailing.jpg": "/static/media/Exterior-Auto-Detailing.edecadb4e22f328d7c3f.jpg",
-    "static/media/check.png": "/static/media/check.f2cd31d9fb0dd03f5560.png",
+    "static/media/man-cleaning-car.webp": "/static/media/man-cleaning-car.4ac88deb5b41c6c63d50.webp",
+    "static/media/check.png": "/static/media/check.13c0043e70648a9c4248.png",
     "index.html": "/index.html",
-    "main.312c2b7a.css.map": "/static/css/main.312c2b7a.css.map",
-    "main.956499ad.js.map": "/static/js/main.956499ad.js.map",
+    "main.52a6826a.css.map": "/static/css/main.52a6826a.css.map",
+    "main.367aa7a8.js.map": "/static/js/main.367aa7a8.js.map",
     "453.a7f4134a.chunk.js.map": "/static/js/453.a7f4134a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.312c2b7a.css",
-    "static/js/main.956499ad.js"
+    "static/css/main.52a6826a.css",
+    "static/js/main.367aa7a8.js"
   ]
 }
